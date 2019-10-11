@@ -2,9 +2,11 @@
 
 Created using
 
-```npx create-react-app [APP_NAME]```
-```npm install react-router-dom```
-```npm start```
+```javascript
+npx create-react-app [APP_NAME]
+npm install react-router-dom
+npm start
+```
 
 Dependencies
 
