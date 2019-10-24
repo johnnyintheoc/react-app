@@ -21,7 +21,7 @@ function News() {
 
   return (
     <section class="content">
-      <h1>News</h1>
+      <h1 class="title">News</h1>
       <p>Random images from <code>http://www.splashbase.co</code></p>
       <p>Click on an image to view full size.</p>
       <ul class="news-links">

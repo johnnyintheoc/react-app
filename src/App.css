@@ -60,6 +60,11 @@ section {
   width:100%;
   padding:20px;
 }
+section .title {
+  font-size:26px;
+  margin-top:80px;
+  margin-bottom:50px;
+}
 footer {
   overflow:hidden;
   border:1px solid #ccc;
@@ -70,7 +75,6 @@ footer {
   text-align:center;
 }
 .news-links {
-  
   list-style:none;
   margin:0;
   padding:0;
@@ -81,3 +85,21 @@ footer {
   margin-left:20px;
   height:300px;
 }
+.yt-links {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.yt-links li {
+  float:left;
+  align-items: center;
+  margin-left:20px;
+  width: 260px;
+  height:300px;
+  font-size:13px;
+}
+.yt-links img {
+  width:250px;
+  border:4px solid #ccc;
+}
+

@@ -13,7 +13,7 @@ function Nav() {
             <ul class="main-nav">
                 <li><Link style={navStyle} to='/'>Home</Link></li>
                 <li><Link style={navStyle} to='/news'>News</Link></li>
-                <li><Link style={navStyle} to='/about'>About</Link></li>
+                <li><Link style={navStyle} to='/giveaways'>Giveaways</Link></li>
             </ul>
         </nav>
     </div>
