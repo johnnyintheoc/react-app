@@ -1,54 +1,41 @@
 ## React App showing page Routing, API fetches, and MYSQL save/queries
 
-Created using
+This project demonstrates how to create a React website with front end routing. Data is served to the pages using Express as the back end routing that queries a MySQL database.
+
+MySQL database is stored at remotemysql.com with a single table.
+channels
+
+Youtube API data
+Using Google APIs, a method was created to retrieve Youtube channel data based on keywords and saved to table "channels".
+Database connection file located in /config/connection.js
 
 ```javascript
-npx create-react-app [APP_NAME]
-npm install react-router-dom, googleapis, mysql
-npm start
-```
-
-Dependencies
-
-```BrowserRouter, Switch, Route, react-dom, mysql```
-
-
-Giveaway Page
-
-* Uses YouTube API (googleapis) library
-* Get your API_KEY from your google developer account.
-* API_KEY can be updated in 'yt-class.js` file.
-* Class file (yt-class.js) created to handle keyword search, saving data to database, and exporting to JSON file (giveaways.json).
-* Results from this page is fetched from /public/giveaways.json file.
-
-```javascript
-/src/components/yt-class.js
-/src/components/yt-cron.js
-node ./src/components/yt-cron.js
-```
-
-News Page
-
-* Uses API from http://splashbase.co
-* JSON data returned
-* Clicking on an image will route to a details page to retrieve further JSON data using the ID
-
-
-MySQL Database & Tables
-
-* Connection files located under /config/connection.js
-* Database: nodejs_db
-* Table: yt
-
-```javascript
-CREATE TABLE `yt` (
+CREATE TABLE `channels` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `channel_id` varchar(50) DEFAULT NULL,
-  `channel` varchar(50) DEFAULT NULL,
-  `title` varchar(100) DEFAULT NULL,
-  `vid_thumbnail` varchar(100) DEFAULT NULL,
-  `pub_date` datetime DEFAULT NULL,
+  `channelId` varchar(100) DEFAULT NULL,
+  `channelTitle` varchar(100) DEFAULT NULL,
+  `videoId` varchar(100) DEFAULT NULL,
+  `videoTitle` varchar(100) DEFAULT NULL,
+  `thumbnailURL` varchar(100) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `publishedAt` datetime DEFAULT NULL,
+  `pageName` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+```
+
+```javascript
+youtubeAPI.js
+getChannels.js
+```
+
+Installation
+* use concurrently to run both servers at the same time.
+
+```javascript
+npx create-react-app [APP_NAME]
+npm install react-router-dom, googleapis, mysql, express, body-parser
+npm start
+node server
 ```

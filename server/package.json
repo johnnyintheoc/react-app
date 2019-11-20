@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "start": "node server"
+  },
+  "description": "Created using",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnnyintheoc/react-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnnyintheoc/react-app/issues"
+  },
+  "homepage": "https://github.com/johnnyintheoc/react-app#readme"
+}

@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "^4.3.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
     "googleapis": "^44.0.0",
     "mysql": "^2.17.1",
     "react": "^16.10.2",
@@ -13,10 +14,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "live": "(cd server && npm run start) & npm run start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "http://johnnyintheoc-node-react.herokuapp.com",
   "eslintConfig": {
     "extends": "react-app"
   },
