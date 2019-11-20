@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 // Routes
-const routeHandler = require('./routes/handler.js');
+const routeHandler = require('../routes/handler.js');
 
 const app = express();
 app.use(bodyParser.urlencoded({extended:false}));
