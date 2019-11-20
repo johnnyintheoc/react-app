@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "node server"
+    "start": "node server.js"
   },
   "description": "Created using",
   "main": "server.js",
