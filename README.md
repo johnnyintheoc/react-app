@@ -2,8 +2,7 @@
 
 This project demonstrates how to create a React website with front end routing. Data is served to the pages using Express as the back end routing that queries a MySQL database.
 
-MySQL database is stored at remotemysql.com with a single table.
-channels
+MySQL database is stored at remotemysql.com with a single table called "channels".
 
 Youtube API data
 Using Google APIs, a method was created to retrieve Youtube channel data based on keywords and saved to table "channels".
@@ -31,7 +30,11 @@ getChannels.js
 ```
 
 Installation
-* use concurrently to run both servers at the same time.
+* Notice two package.json files. One located in the root, and the other under folder "client".
+* These packages are required for running on Heroku.
+* The package has "scripts" to "start" both servers.
+* The root package has "heroku-postbuild" commands.
+* The client package has "proxy" set to 5000.
 
 ```javascript
 npx create-react-app [APP_NAME]
