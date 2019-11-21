@@ -39,3 +39,19 @@ npm install react-router-dom, googleapis, mysql, express, body-parser
 npm start
 node server
 ```
+
+Make sure to create a config file with your database settings and youtube keys. Example below.
+```javascript
+/config/config.js
+
+const keys =  {
+    host: "remotemysql.com",
+    database: DATABASE_NAME,
+    user: DATABASE_USERNAME,
+    password: DATABASE_PASSWORD,
+    port: 3306,
+    YoutubeApiKey: YOUTUBE_API_KEY
+};
+module.exports = keys;
+
+```
