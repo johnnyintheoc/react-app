@@ -9,7 +9,6 @@ const app = express();
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 app.use('/', routeHandler);
-//app.use(express.static(path.join(__dirname,'client/build')), routeHandler);
 
 if (process.env.NODE_ENV === 'production') {
     // Serve any static files
@@ -24,8 +23,5 @@ if (process.env.NODE_ENV === 'production') {
 // Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-    //console.log(`Listening on port ${PORT}.`);
+    console.log(`Listening on port ${PORT}.`);
 });
-
-
-// https://github.com/esausilva/react-production-deployment/tree/master/heroku
